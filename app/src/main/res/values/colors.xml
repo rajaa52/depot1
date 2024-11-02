@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#87CEEB</color>
+    <color name="cardBackgroundColor">#FFFFFF</color>
+    <color name="morningCardColor">#FFEB3B</color>
+    <color name="eveningCardColor">#FF9800</color>
+    <color name="bleuCi">#D1E8E4</color>
+    <color name="vert">#4CAF50</color>
+    <color name="rose">#FFB6C180</color>
+
+</resources>
+

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"> <!-- Ajoutez un padding pour un meilleur espacement -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accueil"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/shareIcon"
+            android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="end"
+        android:contentDescription="Icône de partage"
+        android:padding="4dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/charger" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Bonjour Mlle Rajaa!"
+        android:textColor="@color/black"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+         />
+
+    <ImageView
+        android:id="@+id/imageHello"
+        android:layout_width="45dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="Icône hello"
+        android:src="@drawable/hand"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutMorning"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMorning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textGreeting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Icône Matin"
+            android:src="@drawable/soleil" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_height="match_parent"
+            android:text="Médicaments du Matin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- CardView pour les médicaments du matin -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewMorning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutMorning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/morningCardColor">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMorningMeds"
+            android:layout_width="match_parent"
+            android:layout_height="167dp"
+            android:background="@color/bleuCi"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Médicaments du Soir -->
+    <LinearLayout
+        android:id="@+id/linearLayoutEvening"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/cardViewMorning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Icône Soir"
+            android:src="@drawable/soirpng" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Médicaments du Soir"
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- CardView pour les médicaments du soir -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewEvening"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutEvening"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/eveningCardColor">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewEveningMeds"
+            android:layout_width="match_parent"
+            android:layout_height="183dp"
+            android:background="@color/bleuCi"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bouton à droite -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/cardViewEvening"
+        tools:layout_editor_absoluteX="0dp">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Mes Médicaments" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
