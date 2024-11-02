@@ -1,3 +1,7 @@
+
+https://github.com/user-attachments/assets/fa195f5a-2ae7-4c87-a73c-d4e55f44cc75
+
+
 # Application de Gestion de Médicaments
 
 Cette application permet aux utilisateurs de gérer leurs médicaments, d'ajouter de nouveaux médicaments, de visualiser la liste des médicaments et de recevoir des rappels pour prendre leurs médicaments à des heures spécifiques.
